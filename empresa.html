@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es" id="arriba">
+<head>
+  <meta charset="UTF-8">
+  <title>TecnoSur Components | Empresa</title>
+  <style>
+    html { scrollbar-width: none; }
+    html::-webkit-scrollbar { display: none; }
+    body { max-width: 960px; margin: 0 auto; padding: 24px; font-family: Arial, sans-serif; color: #222; }
+    header { display: flex; align-items: center; gap: 24px; border-bottom: 1px solid #ddd; margin-bottom: 32px; padding-bottom: 16px; }
+    nav a { margin-right: 16px; color: #222; }
+    section { margin: 32px 0; }
+    img, video, iframe, audio { max-width: 100%; }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html">
+      <img src="img/logo.svg" alt="Logotipo de TecnoSur Components" width="200" height="60" loading="lazy">
+    </a>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="productos.html">Productos</a>
+      <a href="precios.html">Precios</a>
+      <a href="empresa.html">Empresa</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h1>Quiénes somos</h1>
+      <p>TecnoSur Components es una tienda especializada en informática, periféricos y asesoramiento técnico para hogares, estudiantes y pequeñas empresas.</p>
+      <p>Trabajamos con productos seleccionados, soporte cercano y soluciones adaptadas a cada cliente.</p>
+    </section>
+
+    <section>
+      <h2>Vídeo de presentación</h2>
+      <video controls width="640" height="360" poster="img/poster-video.jpg">
+        <source src="video/presentacion.webm" type="video/webm">
+        <source src="video/presentacion.mp4" type="video/mp4">
+        <track src="video/subtitulos-es.vtt" kind="subtitles" srclang="es" label="Español" default>
+        Tu navegador no puede reproducir este vídeo. Puedes descargarlo desde la carpeta video.
+      </video>
+    </section>
+
+    <section>
+      <h2>Sintonía</h2>
+      <audio controls>
+        <source src="audio/sintonia.ogg" type="audio/ogg">
+        <source src="audio/sintonia.mp3" type="audio/mpeg">
+        Tu navegador no puede reproducir este audio.
+      </audio>
+    </section>
+
+    <section>
+      <h2>Dónde estamos</h2>
+      <iframe
+        title="Mapa de TecnoSur Components en Valencia"
+        width="640"
+        height="360"
+        loading="lazy"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=-0.3815%2C39.4665%2C-0.3715%2C39.4745&amp;layer=mapnik&amp;marker=39.4705%2C-0.3765">
+      </iframe>
+      <p>
+        <a href="https://www.openstreetmap.org/?mlat=39.4705&amp;mlon=-0.3765#map=16/39.4705/-0.3765" target="_blank" rel="noopener">Ver mapa en tamaño completo</a>
+      </p>
+    </section>
+
+    <section>
+      <h2>Vídeo recomendado</h2>
+      <iframe
+        title="Vídeo recomendado sobre componentes de un ordenador"
+        width="640"
+        height="360"
+        loading="lazy"
+        src="https://www.youtube-nocookie.com/embed/0zkX6nlpiSk"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+    </section>
+    <p><a class="volver" href="#arriba">Volver arriba</a></p>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 TecnoSur Components</p>
+  </footer>
+</body>
+</html>
