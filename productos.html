@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es" id="arriba">
+<head>
+  <meta charset="UTF-8">
+  <title>TecnoSur Components | Productos</title>
+  <style>
+    html { scrollbar-width: none; }
+    html::-webkit-scrollbar { display: none; }
+    body { max-width: 960px; margin: 0 auto; padding: 24px; font-family: Arial, sans-serif; color: #222; }
+    header { display: flex; align-items: center; gap: 24px; border-bottom: 1px solid #ddd; margin-bottom: 32px; padding-bottom: 16px; }
+    nav a { margin-right: 16px; color: #222; }
+    section { margin: 32px 0; }
+    img { max-width: 100%; }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html">
+      <img src="img/logo.svg" alt="Logotipo de TecnoSur Components" width="200" height="60" loading="lazy">
+    </a>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="productos.html">Productos</a>
+      <a href="precios.html">Precios</a>
+      <a href="empresa.html">Empresa</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Productos</h1>
+    <div class="indice">
+      <strong>Categorías:</strong>
+      <a href="#portatiles">Portátiles</a>
+      <a href="#monitores">Monitores</a>
+      <a href="#perifericos">Periféricos</a>
+    </div>
+
+    <section id="portatiles">
+      <h2>Portátiles</h2>
+      <figure>
+        <img src="img/productos/portatil.webp" alt="Ordenador portátil para estudio y trabajo" width="400" height="300" loading="lazy">
+        <figcaption>TecnoBook 15: portátil ligero con buen rendimiento para tareas diarias.</figcaption>
+      </figure>
+      <p>Precio: 749 €</p>
+      <p><a class="volver" href="#arriba">Volver arriba</a></p>
+    </section>
+
+    <section id="monitores">
+      <h2>Monitores</h2>
+      <figure>
+        <img src="img/productos/monitor.jpg" alt="Monitor de sobremesa para oficina" width="400" height="300" loading="lazy">
+        <figcaption>TecnoView 27: monitor para estudiar, programar y trabajar cómodamente.</figcaption>
+      </figure>
+      <p>Precio: 249 €</p>
+      <p><a class="volver" href="#arriba">Volver arriba</a></p>
+    </section>
+
+    <section id="perifericos">
+      <h2>Periféricos</h2>
+      <figure>
+        <img src="img/productos/teclado.png" alt="Teclado completo para ordenador" width="400" height="300" loading="lazy">
+        <figcaption>TecnoKey Pro: teclado resistente para uso diario.</figcaption>
+      </figure>
+      <p>Precio: 59 €</p>
+      <figure>
+        <img src="img/productos/raton.webp" alt="Ratón inalámbrico para ordenador" width="400" height="300" loading="lazy">
+        <figcaption>TecnoMouse: ratón cómodo y preciso para oficina o casa.</figcaption>
+      </figure>
+      <p>Precio: 25 €</p>
+      <p><a class="volver" href="#arriba">Volver arriba</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 TecnoSur Components</p>
+  </footer>
+</body>
+</html>
