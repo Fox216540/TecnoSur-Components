@@ -39,27 +39,27 @@
       <fieldset>
         <legend>Datos personales</legend>
         <label for="nombre">Nombre</label>
-        <input id="nombre" name="nombre" type="text" autocomplete="given-name" required>
+        <input id="nombre" name="nombre" type="text" autocomplete="given-name" placeholder="Tu nombre" required>
         <label for="apellidos">Apellidos</label>
-        <input id="apellidos" name="apellidos" type="text" autocomplete="family-name" required>
+        <input id="apellidos" name="apellidos" type="text" autocomplete="family-name" placeholder="Tus apellidos" required>
         <label for="dni">DNI o NIE</label>
-        <input id="dni" name="dni" type="text" autocomplete="off" pattern="([0-9]{8}[A-Za-z]|[XxYyZz][0-9]{7}[A-Za-z])" title="Introduce un DNI de 8 cifras y letra, o un NIE válido (X, Y o Z, 7 cifras y letra)." required>
+        <input id="dni" name="dni" type="text" autocomplete="off" placeholder="12345678Z" pattern="([0-9]{8}[A-Za-z]|[XxYyZz][0-9]{7}[A-Za-z])" title="Introduce un DNI de 8 cifras y letra, o un NIE válido (X, Y o Z, 7 cifras y letra)." required>
         <label for="nacimiento">Fecha de nacimiento</label>
         <input id="nacimiento" name="nacimiento" type="date" autocomplete="bday" max="2026-10-20" required>
       </fieldset>
       <fieldset>
         <legend>Contacto</legend>
         <label for="correo">Correo electrónico</label>
-        <input id="correo" name="correo" type="email" autocomplete="email" required>
+        <input id="correo" name="correo" type="email" autocomplete="email" placeholder="nombre@ejemplo.com" required>
         <label for="telefono">Teléfono</label>
-        <input id="telefono" name="telefono" type="tel" autocomplete="tel" pattern="[6789][0-9]{8}" title="Introduce un teléfono español de 9 cifras que empiece por 6, 7, 8 o 9." required>
+        <input id="telefono" name="telefono" type="tel" autocomplete="tel" placeholder="612345678" pattern="[6789][0-9]{8}" title="Introduce un teléfono español de 9 cifras que empiece por 6, 7, 8 o 9." required>
       </fieldset>
       <fieldset>
         <legend>Dirección</legend>
         <label for="direccion">Dirección</label>
-        <input id="direccion" name="direccion" type="text" autocomplete="address-line1" required>
+        <input id="direccion" name="direccion" type="text" autocomplete="address-line1" placeholder="Calle, número y piso" required>
         <label for="codigo-postal">Código postal</label>
-        <input id="codigo-postal" name="codigo_postal" type="text" inputmode="numeric" autocomplete="postal-code" pattern="[0-9]{5}" title="Introduce un código postal de 5 cifras." required>
+        <input id="codigo-postal" name="codigo_postal" type="text" inputmode="numeric" autocomplete="postal-code" placeholder="46001" pattern="[0-9]{5}" title="Introduce un código postal de 5 cifras." required>
         <label for="provincia">Provincia</label>
         <select id="provincia" name="provincia" autocomplete="address-level1" required>
           <option value="">Selecciona una provincia</option>
@@ -74,7 +74,7 @@
       <fieldset>
         <legend>Cuenta y preferencias</legend>
         <label for="contrasena">Contraseña</label>
-        <input id="contrasena" name="contrasena" type="password" autocomplete="new-password" minlength="8" required>
+        <input id="contrasena" name="contrasena" type="password" autocomplete="new-password" placeholder="Mínimo 8 caracteres" minlength="8" required>
         <span>Tipo de cliente</span>
         <label class="opcion" for="particular"><input id="particular" name="tipo_cliente" type="radio" value="particular" required>Particular</label>
         <label class="opcion" for="empresa-cliente"><input id="empresa-cliente" name="tipo_cliente" type="radio" value="empresa">Empresa</label>
@@ -83,7 +83,7 @@
         <label class="opcion" for="interes-monitores"><input id="interes-monitores" name="intereses" type="checkbox" value="monitores">Monitores</label>
         <label class="opcion" for="interes-perifericos"><input id="interes-perifericos" name="intereses" type="checkbox" value="perifericos">Periféricos</label>
         <label for="comentarios">Comentarios</label>
-        <textarea id="comentarios" name="comentarios" rows="5"></textarea>
+        <textarea id="comentarios" name="comentarios" rows="5" placeholder="Escribe aquí cualquier comentario adicional"></textarea>
         <label class="opcion" for="privacidad"><input id="privacidad" name="acepta_privacidad" type="checkbox" value="si" required>He leído y acepto la <a href="privacidad.html">política de privacidad</a>.</label>
       </fieldset>
       <button type="submit">Dar de alta</button>
