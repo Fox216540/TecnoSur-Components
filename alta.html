@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es" id="arriba">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TecnoSur Components | Alta de cliente</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { max-width: 960px; margin: 0 auto; padding: 24px; font-family: Arial, sans-serif; color: #172033; background: #f5f7fb; }
+    header { display: flex; flex-wrap: wrap; align-items: center; gap: 24px; border-bottom: 1px solid #dbe2ef; margin-bottom: 32px; padding-bottom: 16px; }
+    nav a { margin-right: 16px; color: #172033; text-decoration: none; }
+    nav a:hover, nav a:focus-visible { color: #1565c0; text-decoration: underline; }
+    main { max-width: 680px; padding: 28px; border-radius: 12px; background: #fff; box-shadow: 0 8px 24px rgb(23 32 51 / 8%); }
+    h1 { margin-top: 0; color: #124f8c; }
+    fieldset { margin: 24px 0; padding: 20px; border: 1px solid #cbd7e6; border-radius: 8px; }
+    legend { padding: 0 8px; font-weight: bold; color: #124f8c; }
+    label { display: block; margin-top: 14px; font-weight: bold; }
+    input, select, textarea { width: 100%; margin-top: 5px; padding: 10px 12px; border: 1px solid #aebdce; border-radius: 6px; font: inherit; }
+    textarea { resize: vertical; }
+    input:focus, select:focus, textarea:focus { outline: 3px solid rgb(21 101 192 / 22%); border-color: #1565c0; }
+    input:invalid:not(:placeholder-shown) { border-color: #b3261e; }
+    .opcion { display: inline-block; margin: 12px 16px 0 0; font-weight: normal; }
+    .opcion input { width: auto; margin: 0 5px 0 0; accent-color: #1565c0; }
+    button { margin-top: 4px; padding: 11px 18px; border: 0; border-radius: 6px; background: #1565c0; color: #fff; font: inherit; font-weight: bold; cursor: pointer; }
+    button:hover, button:focus-visible { background: #0d4c91; }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html"><img src="img/logo.svg" alt="Logotipo de TecnoSur Components" width="200" height="60"></a>
+    <nav aria-label="Principal">
+      <a href="index.html">Inicio</a><a href="productos.html">Productos</a><a href="precios.html">Precios</a><a href="empresa.html">Empresa</a><a href="contacto.html">Contacto</a><a href="alta.html">Alta</a><a href="privacidad.html">Privacidad</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Alta de cliente</h1>
+    <p>Los campos marcados son obligatorios</p>
+    <form action="https://httpbin.org/post" method="post">
+      <fieldset>
+        <legend>Datos personales</legend>
+        <label for="nombre">Nombre</label>
+        <input id="nombre" name="nombre" type="text" autocomplete="given-name" required>
+        <label for="apellidos">Apellidos</label>
+        <input id="apellidos" name="apellidos" type="text" autocomplete="family-name" required>
+        <label for="dni">DNI o NIE</label>
+        <input id="dni" name="dni" type="text" autocomplete="off" pattern="([0-9]{8}[A-Za-z]|[XxYyZz][0-9]{7}[A-Za-z])" title="Introduce un DNI de 8 cifras y letra, o un NIE válido (X, Y o Z, 7 cifras y letra)." required>
+        <label for="nacimiento">Fecha de nacimiento</label>
+        <input id="nacimiento" name="nacimiento" type="date" autocomplete="bday" max="2026-10-20" required>
+      </fieldset>
+      <fieldset>
+        <legend>Contacto</legend>
+        <label for="correo">Correo electrónico</label>
+        <input id="correo" name="correo" type="email" autocomplete="email" required>
+        <label for="telefono">Teléfono</label>
+        <input id="telefono" name="telefono" type="tel" autocomplete="tel" pattern="[6789][0-9]{8}" title="Introduce un teléfono español de 9 cifras que empiece por 6, 7, 8 o 9." required>
+      </fieldset>
+      <fieldset>
+        <legend>Dirección</legend>
+        <label for="direccion">Dirección</label>
+        <input id="direccion" name="direccion" type="text" autocomplete="address-line1" required>
+        <label for="codigo-postal">Código postal</label>
+        <input id="codigo-postal" name="codigo_postal" type="text" inputmode="numeric" autocomplete="postal-code" pattern="[0-9]{5}" title="Introduce un código postal de 5 cifras." required>
+        <label for="provincia">Provincia</label>
+        <select id="provincia" name="provincia" autocomplete="address-level1" required>
+          <option value="">Selecciona una provincia</option>
+          <optgroup label="Comunitat Valenciana">
+            <option value="Alicante">Alicante</option><option value="Castellón">Castellón</option><option value="Valencia">Valencia</option>
+          </optgroup>
+          <optgroup label="Otras comunidades">
+            <option value="Albacete">Albacete</option><option value="Madrid">Madrid</option><option value="Murcia">Murcia</option>
+          </optgroup>
+        </select>
+      </fieldset>
+      <fieldset>
+        <legend>Cuenta y preferencias</legend>
+        <label for="contrasena">Contraseña</label>
+        <input id="contrasena" name="contrasena" type="password" autocomplete="new-password" minlength="8" required>
+        <span>Tipo de cliente</span>
+        <label class="opcion" for="particular"><input id="particular" name="tipo_cliente" type="radio" value="particular" required>Particular</label>
+        <label class="opcion" for="empresa-cliente"><input id="empresa-cliente" name="tipo_cliente" type="radio" value="empresa">Empresa</label>
+        <p>Intereses</p>
+        <label class="opcion" for="interes-portatiles"><input id="interes-portatiles" name="intereses" type="checkbox" value="portatiles">Portátiles</label>
+        <label class="opcion" for="interes-monitores"><input id="interes-monitores" name="intereses" type="checkbox" value="monitores">Monitores</label>
+        <label class="opcion" for="interes-perifericos"><input id="interes-perifericos" name="intereses" type="checkbox" value="perifericos">Periféricos</label>
+        <label for="comentarios">Comentarios</label>
+        <textarea id="comentarios" name="comentarios" rows="5"></textarea>
+        <label class="opcion" for="privacidad"><input id="privacidad" name="acepta_privacidad" type="checkbox" value="si" required>He leído y acepto la <a href="privacidad.html">política de privacidad</a>.</label>
+      </fieldset>
+      <button type="submit">Dar de alta</button>
+    </form>
+  </main>
+  <footer><p>&copy; 2026 TecnoSur Components</p></footer>
+</body>
+</html>
